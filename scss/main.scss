@@ -42,7 +42,9 @@
         list-style: none;
         display: flex;
         li {
-            text-align: center;
+            display: flex;
+            // align-items: center;
+            // justify-content: center;
         }
         li:nth-child(3) {
             display: none;
@@ -178,6 +180,10 @@
             width: 100%;
             font-size: larger;
             font-weight: bold;
+            &:hover {
+                background: $color-1;
+                color: $color-dark;
+            }
         }
     }
     // RÉSEAUX SOCIAUX
@@ -204,6 +210,9 @@
                 -webkit-text-fill-color: transparent;
             }
             .fa-twitter-square {color: #1da1f2;}
+            & i:hover {
+                scale: 1.1;
+            }
         }
     }
     // CARTE DE FIDÉLITÉ

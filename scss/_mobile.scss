@@ -2,20 +2,73 @@
 //      PROGAMMME       //
 //                      //
 @media screen and (min-width: 750px) and (max-width: 1025px) {
-    #navbar .leftside-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    #navbar {
-        ul li a {
-            font-size: 13px;
-        }
-        .adresse {
-            font-size: 12px;
+    // #navbar {
+    //     ul li a {
+    //         font-size: 13px;
+    //     }
+    //     .adresse {
+    //         font-size: 12px;
             
+    //     }
+    //     .leftside-nav {
+    //         display: flex;
+    //         // flex-direction: column;
+    //         align-items: flex-start;
+    //         .adresse {
+    //             width: 90px;
+    //         }
+    //     }
+    // }
+    #navbar {
+        .leftside-nav .adresse{
+            display: none;
+        }
+
+        ul li a {
+            padding: 10px 10px;
         }
     } 
+    #met {
+        display: inline-block;
+        width: 150px;
+    }
+
+    .sidebar {
+        &-1 {
+            height: 160px;
+        }
+        &-2 {
+            height: 140px;
+        }
+    }
+
+    #main-infos {
+        padding: 20px;
+    }
+
+    .affiche-infos {
+        width: 65vw;
+        margin-right: 15px;
+    }
+    .infos.sidebar {
+        width: 100%;
+        & > * {
+            width: 95%;
+        }
+    }
+    .affiche-infos {
+        img {
+            width: 100%;
+        }
+        .mapouter {
+            height: 335px;
+            width: 442px;
+        }
+        .gmap_canvas {
+            height: 335px;
+            width: 442px;
+        }
+    }
 }
 
 
