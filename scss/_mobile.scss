@@ -1,0 +1,230 @@
+//                      //
+//      PROGAMMME       //
+//                      //
+@media screen and (min-width: 750px) and (max-width: 1025px) {
+    #navbar .leftside-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navbar {
+        ul li a {
+            font-size: 13px;
+        }
+        .adresse {
+            font-size: 12px;
+            
+        }
+    } 
+}
+
+
+@media(max-width: 700px) {
+    main {
+        flex-direction: column;
+        padding: 10px 10px;
+        align-items: center;
+    }
+
+    // Navbar
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0px;
+        text-align: center;
+        .leftside-nav .dropdown-menu {
+            display: block;
+        }
+        //     .leftside-nav .dropdown-menu:checked {
+        //         @at-root #navbar ul {
+        //             display: flex;
+        //         }
+        //     }
+        .logo {
+            display: none;
+        }
+        ul {
+            // display: none;
+            flex-direction: column;
+            li {
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    // Hero
+    #hero {
+        height: 40vh;
+    }
+
+    // Affiche Grid
+    .affiche {
+        width: 90vw;
+        margin: 0;
+    }
+
+    .movie-card,
+    .movie-card.reverse {
+        flex-direction: column;
+        justify-content: center;
+        img {
+            margin-right: 0;
+        }
+        .movie-info {
+            justify-content: center;
+            .horaires {
+                width: 295px;
+            }
+        }
+    }
+
+
+    // Sidebar
+    #sidebar-infos,
+    #sidebar-index {
+        display: none;
+    }
+
+
+    // Partenaires
+    .partenaires {
+            #confederation {
+                width: 100%;
+            }
+            .grid-partenaires {
+                padding: 0 10px;
+                gap: 5px 5px;
+            }
+            #grutli {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+
+    // Footer
+    footer {
+        padding: 10px 20px;
+        #footer-img-PC {
+            display: none;
+        }
+
+        #footer-img-mobile {
+            display: block;
+            height: 35px;
+            width: auto;
+            padding: 0;
+            justify-self: center;
+            margin-bottom: 10px;
+        }
+    }
+
+
+//                      //
+//      INFOS           //
+//                      //
+    .infos.sidebar {
+        display: none;
+    }
+
+    .affiche-infos {
+        width: 100vw;
+        margin: 0;
+        padding: 10px 10px;
+        img {
+            width: 100%;
+        }
+        .mapouter {
+            height: 335px;
+            width: 315px;
+        }
+        .gmap_canvas {
+            height: 335px;
+            width: 315px;
+        }
+    }
+
+    #technologie {
+        padding: 20px 0 0 0;
+        border: 1px solid #dbdbdb;
+    }
+
+    #techno-grid {
+        grid-template-columns: repeat(2, 50%);
+        // padding: 0 5px;
+        
+        h2 {
+            font-size: 20px;
+        }
+        .grid-item:nth-child(odd) {
+            background: none;
+        }
+        .grid-item.mobile-dark-bg {
+            background-color: #f4f4f4;
+        }
+    }
+
+
+
+/* ========================================================================== */
+/* DropDown Mechanics */
+/* ========================================================================== */
+    #navbar {
+        ul li:nth-child(3) {
+            display: block;
+        }
+        ul {
+            display: none;
+        }
+        .dropdown-menu {
+            margin-top: 10px;
+            display: block;
+            width: 50px;
+            height: 20px;
+            opacity: 0;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .dropdown-menu + div {
+            position: relative;
+            top: -10px;
+            width: 50px;
+            height: 2px;
+            background: #fff;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background: inherit; 
+            }
+            &::after {
+                top: 10px;
+            }
+        }
+        .dropdown-menu:checked + div + ul {
+            display: block;
+        }
+    }
+
+
+}
+
+// @media screen and (max-width: 767px) and (orientation: landscape) {
+//     html {
+//       transform: rotate(-90deg);
+//       transform-origin: left top;
+//       width: 100vh;
+//       overflow-x: hidden;
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//       height: 100vw;
+//     }
+//   }
+

@@ -1,0 +1,93 @@
+// Variables
+$color-1: #BE1622;
+$color-dark: #8C1119;
+
+
+// CSS Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+main {
+    display: flex;
+    padding: 50px 50px;
+}
+
+body {
+    background: #f3f3f3;
+    font-family: 'Lato', sans-serif;
+}
+
+// Headers
+h1 {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+// Buttons
+%btn-shared {
+    text-decoration: none;
+    padding: 5px 5px;
+    color: #fff;
+    background: $color-dark;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+    }
+}
+
+.btn {
+    &--time {
+        @extend %btn-shared;
+        border-radius: 15px;
+        &:hover {
+            color: $color-dark;
+            background-color: #fff;
+        }
+
+    }
+}
+
+// Links
+a {
+    text-decoration: none;
+}
+
+
+// Lists
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+
+
+
+.text-hl {
+    color: $color-1;
+}
+
+// .placeholder {
+//     margin: auto;
+// }
+
+#anchor {
+    position: relative;
+    top: -50px;
+}

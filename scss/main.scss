@@ -1,0 +1,336 @@
+@import "infos";
+@import "utilities";
+@import "tarifs";
+
+
+// Navbar
+#navbar {
+    .dropdown-menu {
+        display: none;
+    }
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    max-width: 100%;
+    height: auto;
+    background: $color-1;
+    color: #fff;
+    z-index: 10;
+    .leftside-nav {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        background: #000;
+        height: 100%;
+        margin-right: 20px;
+        img {
+            // object-fit: scale-down;
+            height: 70px;
+            width: auto;
+        }
+    }
+    .adresse {
+        p {
+            margin: 5px 0;
+        }
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            text-align: center;
+        }
+        li:nth-child(3) {
+            display: none;
+        }
+        a {
+            text-align: center;
+            height: 100%;
+            padding: 20px 20px;
+            color: #fff;
+            font-weight: bold;
+            font-family: "Coiny", cursive;
+            font-size: 15px;  
+            &:hover {
+                // background: $color-dark;
+                border-bottom: $color-dark 5px solid;
+                color: $color-dark;
+            }
+        }
+    }
+}
+
+
+// Hero
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../../img/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg") no-repeat center center/cover;
+    height: 100vh;
+    img {
+    }
+}
+
+// Affiche grid
+.affiche {
+    // display: grid;
+    // grid-template-columns: 0.5fr;
+    // gap: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-right: 30px;
+    .reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        // justify-content: end;
+    }
+}
+
+
+// Movie cards
+.movie-card {
+    display: flex;
+    align-items: center;
+    // justify-content: ;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(209, 209, 209);
+    .movie-image {
+        .movie-trailer {
+            display: flex;
+            align-items: center;
+            width: 145px;
+        }
+        i {
+            color: $color-1;
+            margin-right: 5px;
+        }
+        a {
+            color: #333;
+            &:hover {
+                font-weight: bold;
+                color: $color-dark;
+            }
+        }
+    }
+    img {
+        width: 140px;
+        height: 220px;
+        margin-right: 20px;
+    }
+    .movie-info {
+        flex-direction: column;
+        align-items: left;
+        justify-content: start;
+        padding: 10px 10px;
+        h2 {
+            // font-family: cooper-black-std, serif;
+            color: $color-1;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .horaires {
+            padding-top: 20px;
+        }
+    }
+}
+
+
+// Sidebar Items
+%sidebar-shared {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // width: 33%;
+    width: 25vw;
+    padding: 30px 30px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(209, 209, 209);
+}
+
+.sidebar {
+    &-1,&-2, &-3, &-4,&-5,&-6 { @extend %sidebar-shared; }
+    // NEWSLETTER
+    &-1 {
+        height: 150px;
+        h2 {
+            color: $color-1;
+            font-weight: bold;
+        }
+        a {
+            color: #fff;
+            background: $color-dark;
+            padding: 10px 0;
+            border-radius: 15px;
+            width: 100%;
+            font-size: larger;
+            font-weight: bold;
+        }
+    }
+    // RÉSEAUX SOCIAUX
+    &-2 {
+        height: 100px;
+        padding: 0;
+        .social-media {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }       
+        a {
+            // padding: 10px;
+            // padding-left: 10px;
+            align-items: center;
+            margin: 0 5px;
+            background: none;
+            .fa-facebook-square {color: #4267b2;}
+            .fa-instagram {
+                font-size:77x;
+                background: #d6249f;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .fa-twitter-square {color: #1da1f2;}
+        }
+    }
+    // CARTE DE FIDÉLITÉ
+    &-3 {
+        border: 1px #1d3ea1 solid;
+        h2 {
+            color: #fff;
+            background: #1d3ea1;
+            border-radius: 15px;
+            padding: 5px 5px;
+        }
+        p {
+            margin-top: 10px;
+            .text-hl {
+                color: #1d3ea1;
+            }
+        }
+    }
+    // EVENEMENT
+    &-4{
+        h2 {
+            // color: rgb(101, 40, 199);
+            color: #1d3ea1;
+            font-weight: bold;
+        }
+        img {
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .title {
+            font-family: cooper-black-std, serif;
+            font-size: large;
+            color: #1d3ea1;
+        }
+    }
+    &-5 {
+        padding: 10px 10px;
+        border: none;
+        // border: 1px solid #1d3ea1;
+        i {
+            vertical-align: middle;
+            color: #1d3ea1;
+        }
+    }
+}
+
+
+// Partenaires
+.partenaires {
+padding: 30px 30px;
+background-color: #fff;
+    #confederation {
+        width: 50%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .grid-partenaires {
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px 10px;
+        // height: 350px;
+        grid-auto-rows: 100px;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            max-height: 90px;
+            object-fit: contain;
+        }
+    }
+    #grutli {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+// Footer
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 20px;
+    background: $color-1;
+    color: #fff;
+    font-size: smaller;
+    a {
+        text-align: center;
+        color: inherit;
+        &:hover {
+            scale: 1.1;
+        }
+    }
+    .adresse-contact a:hover {
+        scale: 1.1;
+    }
+    #footer-img-mobile {
+        display: none;
+    }
+    img {
+        padding: 0 20px;
+        width: 180px;
+        height: auto;
+    }
+    .liens-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+// CopyRight
+.copyright {
+    text-align: center;
+    padding: 5px 0;
+    background: $color-dark;
+    color: #fff;
+    font-size: smaller;
+}
+
+
+@import "mobile";
