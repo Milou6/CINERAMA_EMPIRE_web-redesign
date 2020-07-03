@@ -288,7 +288,7 @@ ul {
     .sidebar-2 a .fa-twitter-square {
       color: #1da1f2; }
     .sidebar-2 a i:hover {
-      scale: 1.1; }
+      transform: scale(1.1); }
 
 .sidebar-3 {
   border: 1px #1d3ea1 solid; }
