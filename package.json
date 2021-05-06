@@ -9,7 +9,10 @@
   "keywords": [],
   "author": "Emile Haas",
   "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
   "dependencies": {
-    "node-sass": "^4.14.1"
+    "y18n": "^5.0.8"
   }
 }
