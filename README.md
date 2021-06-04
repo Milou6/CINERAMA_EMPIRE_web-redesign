@@ -7,4 +7,4 @@ The website is adapted to mobile too!
 The re-design can be found here, hosted on Netlify :
 https://admiring-noether-c12e01.netlify.app/
 
-![image](https://user-images.githubusercontent.com/47149772/120814174-e846b100-c54e-11eb-9b46-13b92177e888.png)
+<img src="./dist/img/Animation.gif" alt="website gif" width="900"/>
