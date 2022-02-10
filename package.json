@@ -10,7 +10,7 @@
   "author": "Emile Haas",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "y18n": "^5.0.8"
